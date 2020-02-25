@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".PersegiPanjangFragment">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/text_panjang"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" android:layout_marginRight="16dp" android:hint="@string/masukkan_panjang"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/text_lebar" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/text_panjang" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp" android:hint="@string/masukkan_lebar"/>
+        <Button
+                android:text="@string/hitung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_hitung_persegi_panjang" android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/text_lebar" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+        <TextView
+                android:text="@string/luas_persegi_panjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_luas" android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/btn_hitung_persegi_panjang"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" android:textColor="#0F0F0F"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_hasil_luas" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_luas" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" tools:text="hasil luas"
+                android:textColor="#141414" android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+        <TextView
+                android:text="@string/keliling_persegi_panjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_keliling" android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hasil_luas" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:textColor="#0F0F0F"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_hasil_keliling" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_keliling" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp" tools:text="hasil keliling"
+                android:textColor="#111111" android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+        <Button
+                android:text="@string/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_share" android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hasil_keliling"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" android:layout_marginRight="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
