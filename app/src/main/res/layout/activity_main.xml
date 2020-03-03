@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            tools:context=".MainActivity">
+
+            <EditText
+                android:id="@+id/e_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/e_pr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/praktikum"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/e_name" />
+
+            <EditText
+                android:id="@+id/e_ass1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/assesment_1"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/e_pr" />
+
+            <EditText
+                android:id="@+id/e_ass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/assesment_2"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/e_ass1" />
+
+            <TextView
+                android:id="@+id/t_absensi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/absensi_75"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toStartOf="@id/rg"
+                app:layout_constraintTop_toBottomOf="@id/e_ass2" />
+
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/t_absensi"
+                app:layout_constraintTop_toBottomOf="@id/e_ass2">
+
+                <RadioButton
+                    android:id="@+id/r_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:checked="true"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/r_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    app:layout_constraintBottom_toBottomOf="@id/r_yes"
+                    app:layout_constraintStart_toEndOf="@id/r_yes"
+                    app:layout_constraintTop_toTopOf="@id/r_yes" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/b_hitung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="32dp"
+                android:background="#FFFF4081"
+                android:padding="5dp"
+                android:text="@string/hitung_nilai_akhir"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toStartOf="@id/b_reset"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg" />
+
+            <Button
+                android:id="@+id/b_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFF4081"
+                android:text="@string/reset"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@id/b_hitung"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/b_hitung"
+                app:layout_constraintTop_toTopOf="@id/b_hitung" />
+
+            <TextView
+                android:id="@+id/t_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/b_hitung" />
+
+            <ImageView
+                android:id="@+id/i_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintBottom_toBottomOf="@id/i_tscore"
+                app:layout_constraintEnd_toStartOf="@id/i_tscore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/t_score" />
+
+            <TextView
+                android:id="@+id/i_tscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="112sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/i_score"
+                app:layout_constraintTop_toBottomOf="@id/t_score" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>
+

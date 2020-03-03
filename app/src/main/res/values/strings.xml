@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Jurnal2Mobdas</string>
+    <string name="name">Name</string>
+    <string name="praktikum">Praktikum</string>
+    <string name="assesment_1">Assesment 1</string>
+    <string name="assesment_2">Assesment 2</string>
+    <string name="absensi_75">Absensi >= 75%</string>
+    <string name="reset">Reset</string>
+    <string name="hitung_nilai_akhir">Hitung Nilai Akhir</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="_0">0</string>
+    <string name="total_score">Total Score :</string>
+    <string name="warning">Periksa Kembali Form Anda</string>
+    <string name="Total_Score">Total Score : %1s</string>
+</resources>
